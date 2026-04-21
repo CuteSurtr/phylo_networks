@@ -1,0 +1,5 @@
+((((Human:0.021,Chimp:0.019):0.008,Gorilla:0.028):0.010,Orangutan:0.040):0.020,(Macaque:0.050,Baboon:0.048):0.025);
+((((Human:0.023,Gorilla:0.031):0.006,Chimp:0.021):0.011,Orangutan:0.043):0.019,(Macaque:0.048,Baboon:0.046):0.024);
+((((Chimp:0.020,Gorilla:0.029):0.007,Human:0.022):0.009,Orangutan:0.041):0.021,(Macaque:0.049,Baboon:0.047):0.026);
+((((Human:0.022,Chimp:0.020):0.009,Gorilla:0.030):0.011,Orangutan:0.042):0.022,(Baboon:0.049,Macaque:0.051):0.024);
+(((Human:0.020,Chimp:0.018):0.010,(Gorilla:0.027,Orangutan:0.039):0.008):0.019,(Macaque:0.050,Baboon:0.048):0.025);
