@@ -2,6 +2,12 @@
 
 A from scratch library for the mathematics of phylogenetic trees and networks. The library implements the combinatorial, geometric, and algebraic structures that underpin modern phylogenetics: split systems and the Buneman compatibility theorem, enumeration of rooted binary trees, Robinson Foulds and quartet distances, the BHV tree space of Billera, Holmes, and Vogtmann with its CAT(0) geometry, the exact Owen Provan polynomial time geodesic algorithm, Frechet means via Bacak proximal iteration, tanglegram crossing minimization, the Neighbor Net circular split algorithm, rearrangement graphs on NNI moves, and the tropical metric on tree space with Fermat Weber points. All core algorithms are verified on exact and sampled data and include golden tests pinned to published values.
 
+**Tests:** 48 passing in ~1 s. **License:** MIT.
+
+![phylomath demo](results/phylomath_demo.png)
+
+![NNI graph (n=5)](results/nni_graph_n5.png)
+
 ## Foundations
 
 Phylogenetic trees on a set of taxa form a space whose mathematical structure is unusually rich. Billera, Holmes, and Vogtmann showed in 2001 that the set of rooted binary phylogenetic trees with positive edge lengths on n leaves forms a metric space made of (2n minus 3) double factorial orthants of dimension n minus 2, glued along faces corresponding to shared splits. This space is CAT(0), meaning it has unique geodesics and well defined means. Owen and Provan gave the first polynomial time algorithm for computing BHV geodesics in 2011. Tropical geometry provides an alternative metric on the same space via the Hilbert projective distance on dissimilarity vectors. Rearrangement graphs, tanglegrams, and Neighbor Net together form the combinatorial and graph theoretic half of the subject, while phylogenetic networks extend the tree model to directed acyclic graphs that accommodate hybridization and horizontal gene transfer.

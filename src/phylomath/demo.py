@@ -38,9 +38,9 @@ def main() -> None:
     print(f'BHV (UB, old)   = {bhv_distance(t1, t2):.4f}')
     print(f'BHV (GTP exact) = {bhv_geodesic(t1, t2):.4f}')
     section('3. PathSpaceGeo closed-form sanity')
-    print(f'k=1 through origin          : α=3,β=4 → {path_space_geo([3.0], [4.0])}')
-    print(f'k=2 ascending ratios        : (1,3)/(2,1) → {path_space_geo([1.0, 3.0], [2.0, 1.0])}')
-    print(f'k=2 descending (merges)     : (3,1)/(1,2) → {path_space_geo([3.0, 1.0], [1.0, 2.0]):.4f}')
+    print(f'k=1 through origin          : alpha=3,beta=4 -> {path_space_geo([3.0], [4.0])}')
+    print(f'k=2 ascending ratios        : (1,3)/(2,1) -> {path_space_geo([1.0, 3.0], [2.0, 1.0])}')
+    print(f'k=2 descending (merges)     : (3,1)/(1,2) -> {path_space_geo([3.0, 1.0], [1.0, 2.0]):.4f}')
     section('4. Enumerate rooted binary trees (Schroder counting)')
     for n in (3, 4, 5, 6, 7):
         c = sum((1 for _ in binary_topologies(n)))
@@ -58,7 +58,7 @@ def main() -> None:
     var = frechet_variance(mu, trees)
     print(f'  Frechet variance = {var:.6f}')
     print(f'  mean has {len(mu)} non-zero internal splits')
-    section('7. Tanglegram — default vs OTCM vs TTCM')
+    section('7. Tanglegram -- default vs OTCM vs TTCM')
     h = parse_newick('(((A,B),C),(D,E));')
     p = parse_newick('(((A,C),B),(E,D));')
     print(f'  default layout crossings   = {count_crossings(leaf_order(h), leaf_order(p))}')
@@ -83,12 +83,12 @@ def main() -> None:
     fw = fermat_weber(Us)
     obj_fw = sum((tropical_distance(fw, u) for u in Us))
     obj_u0 = sum((tropical_distance(Us[0], u) for u in Us))
-    print(f'  d∞(T_0, T_1)        = {d_trop:.4f}')
+    print(f'  dinf(T_0, T_1)        = {d_trop:.4f}')
     print(f'  FW objective        = {obj_fw:.4f}')
-    print(f'  objective at T_0    = {obj_u0:.4f}   (FW should be ≤)')
+    print(f'  objective at T_0    = {obj_u0:.4f}   (FW should be <=)')
     assert obj_fw <= obj_u0 + 1e-06, "FW point isn't reducing objective"
     if MATPLOTLIB:
-        section('10. Visualization — writing figures to results/')
+        section('10. Visualization -- writing figures to results/')
         fig, axs = plt.subplots(2, 2, figsize=(11, 9))
         viz.plot_tree(trees[0], ax=axs[0][0])
         axs[0][0].set_title('Primate tree 1')
@@ -103,6 +103,6 @@ def main() -> None:
         fig2.savefig(RESULTS / 'nni_graph_n5.png', dpi=150, bbox_inches='tight')
         print(f"  wrote {RESULTS / 'nni_graph_n5.png'}")
     else:
-        print('\n  (matplotlib not available — skipping viz)')
+        print('\n  (matplotlib not available -- skipping viz)')
 if __name__ == '__main__':
     main()

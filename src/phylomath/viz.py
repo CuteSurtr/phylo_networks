@@ -155,7 +155,7 @@ def plot_bhv_T4_link(ax: Optional[plt.Axes]=None) -> plt.Axes:
     ax.set_xlim(-1.6, 1.6)
     ax.set_ylim(-1.4, 1.4)
     ax.set_aspect('equal')
-    ax.set_title('Link of origin in T₄ = Petersen graph')
+    ax.set_title('Link of origin in T? = Petersen graph')
     ax.set_xticks([])
     ax.set_yticks([])
     for s in ax.spines.values():
@@ -187,8 +187,8 @@ def plot_frechet_path(trees: Sequence[Tree], n_iters: int=200, seed: int=0, ax: 
         traj.append(obj(mu_lengths))
     ax.plot(traj, color='tab:purple', linewidth=1.3)
     ax.set_xlabel('iteration k')
-    ax.set_ylabel('Fréchet objective')
-    ax.set_title('Bačák proximal-point convergence')
+    ax.set_ylabel('Frechet objective')
+    ax.set_title('Bacak proximal-point convergence')
     ax.grid(alpha=0.3)
     return ax
 

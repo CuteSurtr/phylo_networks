@@ -40,7 +40,7 @@ class Split:
     def __repr__(self) -> str:
         a = '{' + ','.join(map(str, sorted(self.A))) + '}'
         b = '{' + ','.join(map(str, sorted(self.B))) + '}'
-        return f'Split({a}|{b}, ℓ={self.length:g})'
+        return f'Split({a}|{b}, ?={self.length:g})'
 
 def pairwise_compatible(splits: Iterable[Split]) -> bool:
     sp = list(splits)
